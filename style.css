@@ -1,0 +1,289 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    font-family: 'Poppins', sans-serif;
+}
+
+.titulo{
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px 20px 10px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, .3);
+}
+
+
+.contenedorArriba{
+    width: 240px;
+    height: auto;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.2);
+    margin: auto;
+    
+    
+}
+
+
+
+input{
+    border: solid 1px;
+    border-radius: 4px;
+}
+
+.contenedorArriba button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    padding: 5px 10px 5px 10px;
+    margin: 15px  auto 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.2);
+
+    
+}
+
+.contenedorAbajo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    width: auto;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, .3);
+    border-radius: 10px;
+}
+
+.contactos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 20px 10px 20px;
+    text-align: center;
+}
+ 
+
+.contactos th {
+    width: 100px;
+    margin: auto;
+}
+
+
+.btnEliminar,
+.btnEditar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    padding: 5px 10px 5px 10px;
+    margin: 15px  auto 15px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.2);
+    
+}
+
+#ventanaEmergente{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% ;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s,opacity 0.3s;
+
+}
+
+#ventanaEmergente.mostrar{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+.contenido{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    background: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    
+}
+
+
+
+.botonesVentana {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#btnconfirmar,
+#btncancelar,
+#btnGuardar,
+#btnEditarCance,
+#btnOk{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    padding: 5px 10px 5px 10px;
+    margin: 30px 10px -20px 10px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.2);
+
+    
+}
+
+
+
+#editarContacto{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% ;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s,opacity 0.3s;
+}
+
+#editarContacto.mostrarEditar{
+    visibility: visible;
+    opacity: 1;
+}
+
+.contenidosEditar{
+    width: 400px;
+    height: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, .3);
+    border-radius: 10px;
+}
+
+.botonesEditar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#ventanaRellenar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100% ;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s,opacity 0.3s;
+}
+
+#ventanaRellenar.mostrarRellenar{
+    visibility: visible;
+    opacity: 1;
+}
+
+.contenidoVentana{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+
+@media (max-width:450px){
+
+        body {
+            background: rgb(63,94,251);
+            background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
+       }
+    
+       .contenedor{
+            width: 100vw;
+            height: 100vh;
+            overflow-y: scroll;
+       }
+      
+       .titulo {
+        margin: 25px 0 20px 0;
+       }
+    
+       .contenedorAbajo {
+        overflow-x: auto;
+       }
+    
+       .tablaWrapper {
+        width: 350px;
+        overflow-x: scroll;
+       }
+    
+      .contactos {
+        overflow-x: scroll;
+        
+      }
+    
+      .tablaDatos td,
+      .tablaDatos th {
+       padding: 0 20px 0 25px; 
+      } 
+    
+    
+}
