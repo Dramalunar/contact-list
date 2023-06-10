@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/style.css">
+    <script src="https://kit.fontawesome.com/bbf6fb6749.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>&#128101; Lista de Contactos</title>
+</head>
+<body>
+    
+<div class="contenedor">
+
+   <div class="titulo">
+    <h1 class="titulopagina">LISTA DE CONTACTO</h1>
+   </div>
+
+    <div class="contenedorArriba">
+       
+        <div class="entradas">
+            <h1>Contacto</h1>
+            <form action="">
+                <div class="id">
+                    <h4>Id</h4>
+                    <input type="number"  id="inputId">
+                </div>
+                <div class="nombre">
+                    <h4>Nombre</h4>
+                    <input type="text" id="inputNombre">
+                </div>
+                <div class="apellido">
+                    <h4>Apellido</h4>
+                    <input type="text"  id="inputApellido">
+                </div>
+                <div class="telefono">
+                    <h4>Telefono</h4>
+                    <input type="number"  id="inputTelefono">
+                </div>
+                <div class="ciudad">
+                    <h4>Ciudad</h4>
+                    <input type="text" id="inputCiudad">
+                </div>
+                <div class="direccion">
+                    <h4>Direccion</h4>
+                    <input type="text" id="inputDireccion">
+                </div>
+                <div class="agregarContact">
+                    <button id="botonAñadir">Añadir</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <div class="contenedorAbajo">
+        <h1>Contactos Añadidos</h1>
+
+        <div class="contactos">
+            <div class="tablaWrapper">
+                <table class="tablaDatos">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Telefono</th>
+                            <th>Ciudad</th>
+                            <th>Direccion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <div id="ventanaEmergente">
+        <div class="contenido">
+            <h4 class="pregunta">Estas seguro de borrar este contacto?</h4>
+            <div class="botonesVentana">
+                <button id="btnconfirmar">Si,seguro</button>
+                <button id="btncancelar">Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="editarContacto">
+        <div class="contenidosEditar">
+            <h1>Actualizar Contacto</h1>
+            <form id="editarForm">
+                <div id="idNueva">
+                    <h4>Id</h4>
+                    <input type="number" placeholder="eje: 9806456" id="inputIdNueva">
+                </div>
+                <div id="nombreNueva">
+                    <h4>Nombre</h4>
+                    <input type="text" placeholder="eje: Camilo" id="inputNombreNueva">
+                </div>
+                <div id="apellidoNueva">
+                    <h4>Apellido</h4>
+                    <input type="text" placeholder="eje: Rodriguez" id="inputApellidoNueva">
+                </div>
+                <div id="telefonoNueva">
+                    <h4>Telefono</h4>
+                    <input type="number" placeholder="eje: 318-xxx-xxxx" id="inputTelefonoNueva">
+                </div>
+                <div id="ciudadNueva">
+                    <h4>Ciudad</h4>
+                    <input type="text" placeholder="eje: San Gil" id="inputCiudadNueva">
+                </div>
+                <div id="direccionNueva">
+                    <h4>Direccion</h4>
+                    <input type="text" placeholder="eje: Cra XX #XX-X" id="inputDireccionNueva">
+                </div>
+            </form>
+            
+            <div class="botonesEditar">
+                <button id="btnGuardar">Guardar</button>
+                <button id="btnEditarCance">Cancelar</button>  
+            </div>
+        </div>
+    </div>
+
+
+    <div id="ventanaRellenar">
+        <div class="contenidoVentana">
+            <h4>¡Debes completar todos los campos!</h4>
+            <button id="btnOk">Ok...</button>
+
+        </div>
+    </div>
+</div>
+<script src="Listacontactos.js"></script>
+
+</body>
+</html>
