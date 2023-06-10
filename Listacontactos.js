@@ -1,5 +1,6 @@
 let listaContactos = [];
 
+//Funcion de Añadir contactos
 function agregarContacto(id ,nombre ,apellido ,telefono ,ciudad ,direccion) {
  let contacto = {
     id: id,
@@ -14,12 +15,13 @@ function agregarContacto(id ,nombre ,apellido ,telefono ,ciudad ,direccion) {
   listaContactos.push(contacto);
  }
 
+//Comprobando
+ agregarContacto("1005480","David","Almeida","3185106787","San Gil","Cra 20#12-30")
+ agregarContacto("1005480","David","Almeida","3185106787","San Gil","Cra 20#12-30")
 
- agregarContacto("1005480","David","Almeida","3185106787","San Gil","Cra 20#12-30")
- agregarContacto("1005480","David","Almeida","3185106787","San Gil","Cra 20#12-30")
  console.log(listaContactos)
 
-
+//funcion de eliminar contacto
  function eliminarContacto(id) {
   const index = listaContactos.findIndex(contacto => contacto.id === id);
 
@@ -27,6 +29,8 @@ function agregarContacto(id ,nombre ,apellido ,telefono ,ciudad ,direccion) {
       listaContactos.splice(index,1)
   }
 }
+
+//codigo para tomar los contenidos de los inputs y añadirlos como un contacto, se hizo un if por si alguno de los inputs estaba vacio, no se activaria la funcion 
 
 let ventanaRellenar = document.querySelector("#ventanaRellenar");
 const btnOk = document.getElementById("btnOk");
@@ -53,7 +57,7 @@ const btnOk = document.getElementById("btnOk");
     agregarContacto(id,nombre,apellido,telefono,ciudad,direccion)
 
 
-
+    //limpiar los inputs cada vez que se agregue un nuevo contacto
     document.getElementById(`inputId`).value = ``;
     document.getElementById(`inputNombre`).value = ``;
     document.getElementById(`inputApellido`).value = ``;
@@ -62,6 +66,7 @@ const btnOk = document.getElementById("btnOk");
     document.getElementById(`inputDireccion`).value = ``;
 
 
+    //tomando los datos y insertandolos en una tabla con innerhtml
 
   const tablaDatos = document.querySelector('.tablaDatos tbody');
   const newRow = tablaDatos.insertRow();
@@ -77,6 +82,7 @@ const btnOk = document.getElementById("btnOk");
     <td><button class="btnEditar" data-id="${id}"><i class="fa-solid fa-pen-to-square"></i></button></td>
   `;
 
+  //codigo para eliminar el contacto en especifico donde se preciono el boton
 const btnEliminar = newRow.querySelector(".btnEliminar");
 btnEliminar.addEventListener("click",() =>{
   mostrarConfirmacion(id)
@@ -110,6 +116,8 @@ function eliminarFila(id){
 
 
 //Boton de editar
+
+// puedo decir que esta funcion fue una locura, me sirvio mucho de aprendizaje para mejorar logica y demas , dure demasiado tiempo intentando que funcionara, en un momento llego a funcionar pero cuando queria editar otro contacto se editaba el anterior tambien , di mil vueltas jajjaa, hice una celebracion como de 30 minutos cuando lo logre conseguir , me gusto fue que al final realmente le meti logica , y lo logre
 
 
 let ventanaEditar = document.getElementById("editarContacto");
@@ -180,7 +188,7 @@ function actualizarContacto(id){
 
   });
 
-
+//aprendi mucho con esta practica,html,css y js, ya inicio con react y claro hay cosas que mejorar en las anteriores tecnologias, pero esto fue genial , me doy mis mas sinceras felicitaciones a mi, fue dificil, pero se logro y quedo bonita la pagina :)
 
 
  
